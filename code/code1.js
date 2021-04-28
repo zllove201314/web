@@ -13,3 +13,12 @@
   }, 10)
 */
 
+var p = Promise.resolve()
+    .then(a=> 'hello')
+    .then(res =>{
+    return  res+'lagou'
+}).then(res => {
+   return  console.log(res+'I ♥ U')
+})
+console.log(p)
+

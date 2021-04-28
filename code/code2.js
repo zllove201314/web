@@ -40,35 +40,40 @@ const cars = [{
 ]
 
 /*
-  练习1:  
+  练习1:
     let last_car = fp.last(cars)   获取最后一条数据
     fp.prop('in_stock', last_car)  获取最后一条数据的 in_stock 属性值
 
-  实现 isLastInStock 函数, 要求使用 fp.flowRight() 
+  实现 isLastInStock 函数, 要求使用 fp.flowRight()
   把 fp.last(), fp.prop() 组合而成
 */
 
 // 1.实现 isLastInStock 函数
+const isLastInStock = fp.prop('in_stock', fp.last(cars))
 
-// 2.打印测试
-console.log( isLastInStock(cars) )  // 最终返回 true
+
+// 2.打印测 试
+console.log( isLastInStock )  // 最终返回 true
+
+
 
 /*
-  练习2: 
+  练习2:
   实现 firstName 函数, 要求使用 fp.flowRight()
   把 fp.prop(), fp.first() 组合而成
 */
 // 1.实现 firstName 函数
 
+const firstName = fp.prop('name', fp.first(cars))
 // 2.打印测试
-console.log( firstName(cars) )  // 最终返回 Ferrari FF (第一个 car 的 name) 
+console.log( firstName )  // 最终返回 Ferrari FF (第一个 car 的 name)
 
 
 /*
-  练习3: 
+  练习3:
   实现函数 averageDollarValue, 要求使用 fp.flowRight()
   把 fp.map(), _average() 组合而成
-  
+
   参考代码:
     let averageDollarValue = function (cars) {
         let dollar_values = fp.map(function (car) {
@@ -80,14 +85,18 @@ console.log( firstName(cars) )  // 最终返回 Ferrari FF (第一个 car 的 na
   let _average = function (xs) {
     return fp.reduce(fp.add, 0, xs) / xs.length
   } // <- 无须改动
-  
+
+    let dollar_values = fp.map(function (car) {
+        return car.dollar_value
+    }, cars)
+    _average(dollar_values)
   // 1.实现 averageDollarValue 函数
-  
+
   // 2.打印测试
-  console.log( averageDollarValue(cars) )  // 最终返回 
+  console.log( averageDollarValue(cars) )  // 最终返回
 
 /*
-  练习4: 
+  练习4:
   实现 sanitizeNames() 函数，要求使用 fp.flowRight()
   把 返回一个下划线连接的小写字符串，
   把数组中的 name 转换为这种形式： 例如：sanitizeNames(["Hello World"]) => ["hello_world"]
@@ -96,6 +105,7 @@ console.log( firstName(cars) )  // 最终返回 Ferrari FF (第一个 car 的 na
 let _underscore = fp.replace(/\W+/g, '_') // <--无须改动
 
 // 1.实现 sanitizeNames 函数
+let sanitizeNames= _underscore(fp.splice(' ',["Hello World"]))
 
 // 2.打印测试
-console.log( sanitizeNames(cars) )
+console.log( sanitizeNames )
