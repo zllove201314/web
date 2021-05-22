@@ -13,12 +13,15 @@
   }, 10)
 */
 
-var p = Promise.resolve()
-    .then(a=> 'hello')
-    .then(res =>{
-    return  res+'lagou'
-}).then(res => {
-   return  console.log(res+'I ♥ U')
-})
-console.log(p)
+function fn(str) {
+  return new Promise(reslove => {
+    setTimeout(() => {
+      reslove(str)
+    }, 10);
+  })
+}
 
+fn('hello')
+  .then(str => fn(str + 'lagou'))
+  .then(str => fn(str + 'I ♥ U'))
+  .then(console.log)

@@ -49,7 +49,7 @@ Math.min(...arr)
 
 ### 4. 请详细说明var、let、const三种声明变量的方式之间的具体差别
 let（const）同样会被提升变量到代码块的顶部，但是不会被赋予初始值,var会被赋值undefined
-const 常量 声明后不可在改变
+const 常量 声明后不可在改变，let 不能重复声明已存在的变量，var可以
 　
 
 　
@@ -68,7 +68,8 @@ var obj = {
 }
 obj.fn()
 ```
-
+20
+this在箭头函数里指向上下文，此时上下文在obj内，就只想内部的a属性
 　
 
 　
