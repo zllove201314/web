@@ -1,43 +1,64 @@
-## 简答题
+# 拉勾教育大前端高薪训练营作业
 
-打开 code / 简答题.md 文件,   根据其中题目答题并保存
+#### 推荐操作
+
+#### 1.在 gitee 或 github 创建自己的作业仓库, 并拿到仓库地址
+
+( **需要先注册账户**。推荐 gitee，国内相对稳定一些，github账户也可直接登录 )
+
+![](./part1/fed-e-task-01-01/images/2021-02-26_150756.png)
 
 
 
-## 代码题
 
-#### 准备工作
 
-- 进入 code 目录, 
-- 初始化项目生成 package.json
-- 并且安装 lodash
+<img src="./part1/fed-e-task-01-01/images/2021-02-26_152038.png" style="zoom:73%;" />
 
-#### 代码1
+**拿到仓库地址**
 
-打开 code / code1.js , 按其中要求编写完成代码
-
-　
-
-#### 代码2
-
-打开 code / code2.js 编辑补全代码, 完成4个练习要求
+![](./part1/fed-e-task-01-01/images/2021-02-26_155518.png)
 
 　
 
-#### 代码3
+#### 2.克隆作业模板, 与新建仓库关联
 
-**1) 参照下面图片敲代码, 创建 code / support.js 文件**
+```shell
+# 1)克隆. 不要复制 $ 符号 
+$ git clone https://gitee.com/lagoufed/lagoufed-e-task.git
 
-![2020-12-21_211700](images/2020-12-21_211700.png)
+# 2)进入目录
+$ cd lagoufed-e-task
 
-**2) 打开 code / code3.js 编辑补全代码, 完成4个练习要求**
+# 3)关联新建的空库  『后面 https://.... .git 是自己新建的仓库地址』
+$ git remote set-url origin https://gitee.com/xxx/lagou-e-task.git
+```
+
+　
+
+#### 3.学习完相应模块, 到本地相应文件夹下补全\书写作业.
+
+![](./part1/fed-e-task-01-01/images/2020-12-28_182244.png)
 
 　
 
-#### 代码4
+#### 4.完成作业. 保存版本. 推送到远程仓库.
 
-打开 code / MyPromise.js , 尽可能还原 Promise 中的每一个函数, 并通过注释描述思路和原理
+```shell
+$ git add .
+$ git commit -m "part1-1作业"
+$ git push origin master
+```
 
 　
 
-　
+#### 5.提交自己仓库相应模块地址即可
+
+![](./part1/fed-e-task-01-01/images/2020-12-28_191708.png)
+
+
+
+
+
+
+
+[**对于老学员 Fork 后, 出现403无权访问的解决**](https://gitee.com/lagoufed/fed-e-questions/blob/master/part1/%E8%A7%A3%E5%86%B3%E4%BD%9C%E4%B8%9A403%E9%97%AE%E9%A2%98.md)
