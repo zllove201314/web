@@ -4,7 +4,7 @@
 
 ```js
 let vm = new Vue({
- el: '#el'
+ el: '#el',
  data: {
   o: 'object',
   dog: {}
@@ -17,7 +17,8 @@ let vm = new Vue({
  }
 })
 ```
-
+不是响应式的，Vue中data成员是在Vue初始化的时候通过 new Observer 将其响应式处理；
+新添加的成员，只是在实例上新加了一个属性，没有经过observe处理，所以该成员不是响应式的
  　
 
 　
@@ -28,7 +29,12 @@ let vm = new Vue({
 
 ### 2、请简述 Diff 算法的执行过程
 
-　
+　查找两颗树每个节点的差异，有几种算法，把第一棵树的上所有节点和第二棵树上所有节点进行对比，
+ 会比较n的平方次，找到差异后，再循环更新差异的部分，调用名为 patch 的函数，比较新旧节点，
+ 一边比较一边给真实的 DOM 打补丁。 patch 函数接收两个参数 oldVnode 和 Vnode 分别
+ 代表新的节点和之前的旧节点,这个函数会比较 oldVnode 和 vnode 是否是相同的, 
+ 即函数 sameVnode(oldVnode, vnode),
+
 
 　
 
